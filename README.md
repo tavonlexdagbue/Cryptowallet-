@@ -6,14 +6,26 @@
 - Android Studio / VS Code with Flutter extensions
 - Android SDK / Xcode (for iOS development)
 
-Install
 
-1. Install dependencies:
-Terminal
+to use flutter on vscode install
+sudo snap install flutter --classic
+
+# Set up
+flutter doctor
+
+ Go to your project folder
+
+# Install dependencies
 flutter pub get
 
-2. Run the application:
-Terminal
+# Run the app
+flutter run
+
+# if you are on an unstable flutter use the codes below
+flutter channel stable
+flutter upgrade
+flutter clean
+flutter pub get
 flutter run
 
  Project Structure
