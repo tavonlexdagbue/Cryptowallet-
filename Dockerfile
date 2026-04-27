@@ -9,7 +9,7 @@ RUN apt-get update && apt-get install -y \
 # Set up Flutter
 ENV FLUTTER_HOME=/opt/flutter
 RUN git clone https://github.com/flutter/flutter.git -b 3.16.0 /opt/flutter
-
+RUN flutter build web --no-wasm-dry-run
 ENV PATH="$FLUTTER_HOME/bin:$FLUTTER_HOME/bin/cache/dart-sdk/bin:${PATH}"
 
 # Enable web support
@@ -27,7 +27,7 @@ COPY . .
 RUN flutter pub get
 
 # Build web app
-RUN flutter build web
+RUN flutter build web --release --no-wasm-dry-run
 
 # -------- Stage 2: Serve with Nginx --------
 FROM nginx:alpine
