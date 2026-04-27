@@ -8,7 +8,7 @@ RUN apt-get update && apt-get install -y \
 
 # Set up Flutter
 ENV FLUTTER_HOME=/opt/flutter
-RUN git clone https://github.com/flutter/flutter.git $FLUTTER_HOME
+RUN git clone https://github.com/flutter/flutter.git -b 3.16.0 /opt/flutter
 
 ENV PATH="$FLUTTER_HOME/bin:$FLUTTER_HOME/bin/cache/dart-sdk/bin:${PATH}"
 
