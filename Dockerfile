@@ -10,11 +10,9 @@ RUN apt-get update && apt-get install -y \
 ENV FLUTTER_HOME=/opt/flutter
 
 # Clone Flutter (choose stable or pinned version)
-RUN git clone https://github.com/flutter/flutter.git -b 3.16.0 $FLUTTER_HOME
-
+RUN git clone https://github.com/flutter/flutter.git -b stable $FLUTTER_HOME
 # ✅ SET PATH BEFORE USING FLUTTER
 ENV PATH="$FLUTTER_HOME/bin:$FLUTTER_HOME/bin/cache/dart-sdk/bin:${PATH}"
-
 # Verify Flutter works (optional but useful)
 RUN flutter doctor
 
