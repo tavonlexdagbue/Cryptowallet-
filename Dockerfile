@@ -31,7 +31,8 @@ RUN flutter pub get
 
 # Build web
 RUN flutter build web --release --no-wasm-dry-run
-
+ARG CACHE_BUST=1
+RUN echo "Cache bust: $CACHE_BUST"
 
 # -------- Stage 2: Serve with Nginx --------
 FROM nginx:alpine
