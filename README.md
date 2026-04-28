@@ -1,6 +1,9 @@
 # Cryptowallet-
- Details
-
+# To Deploy on Railway
+ 
+ Generate Domain using your port number you had placed on your ngnix.config and Dockerfile 8080
+ Open app
+# OR
 - Flutter SDK (^3.29.2)
 - Dart SDK
 - Android Studio / VS Code with Flutter extensions
@@ -64,6 +67,7 @@ class AppRoutes {
     // Add more routes as needed
   }
 }
+
 ```
 Theme
 
